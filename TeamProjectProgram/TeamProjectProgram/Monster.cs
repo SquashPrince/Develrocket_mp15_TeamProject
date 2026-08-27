@@ -29,5 +29,16 @@ public abstract class Monster : IDamageable, IMoveable, IObservable
         return true;
     }
 
-    public virtual void OnNotify();
+    public virtual void OnNotify()
+    {
+        if(Hp >= 0)
+        {
+            Console.WriteLine($"{Name} : 남은 체력 {Hp}");
+        }
+        else
+        {
+            Console.WriteLine($"{Name}은 죽었습니다.");
+        }
+
+    }
 }
