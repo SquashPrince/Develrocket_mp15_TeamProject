@@ -6,11 +6,11 @@ public struct MonsterData
 
     public int Level;
 
-    public MonsterData(string name, int health, int Level)
+    public MonsterData(string name, int health, int level)
     {
         Name = name;
         Health = health;
-        Level = Level;
+        Level = level;
     }
 }
 

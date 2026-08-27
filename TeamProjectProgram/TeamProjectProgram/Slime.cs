@@ -15,16 +15,5 @@ public class Slime : Monster, IDamageable
         }
     }
 
-    // public Slime(string name) : base(name) { }
-    //
-    // public void TakeDamage(int damAmount)
-    // {
-    //     _health -= damAmount;
-    // }
-    //
-    //
-    // public override void OnNotify()
-    // {
-    //     Console.WriteLine($"몬스터 이름 : {Name}  체력 : {Health}");
-    // }
+    public Slime(string name) : base(name) { }
 }
