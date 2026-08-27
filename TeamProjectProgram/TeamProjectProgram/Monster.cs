@@ -1,13 +1,17 @@
 ﻿using System;
 
-using TeamProjectProgram;
-
 public abstract class Monster : IDamageable, IMoveable, IObservable
 {
     public string Name { get; set; } = "";
     public int damage = 1;
     public int Hp { get; set; }
     private int position = 0;
+
+    public int Shell = 40;
+    /*public int Shell(int shell)
+    {
+        Shell = shell;
+    }*/
 
     public Monster(string name)
     {
@@ -30,7 +34,7 @@ public abstract class Monster : IDamageable, IMoveable, IObservable
     {
         return true;
     }
-
+    
     public virtual void OnNotify()
     {
         if(Hp >= 0)
