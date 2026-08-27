@@ -9,6 +9,8 @@ public abstract class Monster : IDamageable, IMoveable, IObservable
     public int Hp { get; set; }
     private int position = 0;
 
+    public int Shell = 40;
+
     public Monster(string name)
     {
         Name = name;
@@ -27,6 +29,11 @@ public abstract class Monster : IDamageable, IMoveable, IObservable
     public bool isDead()
     {
         return true;
+    }
+
+    public int Shell(int shell)
+    {
+        Shell = shell;
     }
 
     public virtual void OnNotify();
