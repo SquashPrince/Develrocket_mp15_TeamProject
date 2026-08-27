@@ -2,6 +2,6 @@ namespace TeamProjectProgram;
 
 public interface IDamageable
 {
-    void TakeDamage(int damage);
-    bool isDead();
+    public void TakeDamage(int damage);
+    public bool isDead();
 }
