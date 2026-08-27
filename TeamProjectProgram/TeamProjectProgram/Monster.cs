@@ -1,5 +1,5 @@
 ﻿using System;
-public abstract class Monster
+public abstract class Monster : IObservable
 {
     private string _name;
     public string Name
@@ -18,4 +18,6 @@ public abstract class Monster
     {
         Name = name;
     }
+
+    public virtual void OnNotify() { }
 }
