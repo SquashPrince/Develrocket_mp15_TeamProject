@@ -1,7 +1,7 @@
 ﻿
 public class Player
 {
-    public string Name;
+    public string Name = "";
     public int HP;
     public int Level;
 
