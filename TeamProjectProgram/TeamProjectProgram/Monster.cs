@@ -45,6 +45,5 @@ public abstract class Monster : IDamageable, IMoveable, IObservable
         {
             Console.WriteLine($"{Name}은 죽었습니다.");
         }
-
     }
 }
