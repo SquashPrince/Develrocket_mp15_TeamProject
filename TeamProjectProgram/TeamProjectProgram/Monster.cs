@@ -1,23 +1,26 @@
 ﻿using System;
-public abstract class Monster : IObservable
+
+using TeamProjectProgram;
+
+public abstract class Monster : IDamageable, IMoveable
 {
-    private string _name;
-    public string Name
+    public string Name { get; set; } = "";
+    public int damage = 1;
+    public int Hp { get; set; }
+    private int position = 0;
+
+    public void Move(int distance)
     {
-        get
-        { 
-            return _name;
-        }
-        set
-        { 
-            _name = value;
-        }
+        position += distance;
     }
 
-    public Monster(string name)
+    public void TakeDamage(int damage)
     {
-        Name = name;
+        Hp -= damage;
     }
 
-    public virtual void OnNotify() { }
+    public bool isDead()
+    {
+        return true;
+    }
 }

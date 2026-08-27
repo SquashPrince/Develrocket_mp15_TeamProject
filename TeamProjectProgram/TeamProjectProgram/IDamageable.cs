@@ -1,7 +1,8 @@
-﻿using System;
+
+namespace TeamProjectProgram;
+
 public interface IDamageable
 {
-    public int Health { get; }
-
-    public void TakeDamage(int dmgAmount);
+    public void TakeDamage(int damage);
+    public bool isDead();
 }
