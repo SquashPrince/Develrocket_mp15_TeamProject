@@ -1,4 +1,4 @@
-﻿public class goblin
+﻿public class Goblin
 {
     public int attack {  get; set; }
 }

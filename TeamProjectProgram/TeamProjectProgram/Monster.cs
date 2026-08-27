@@ -1,12 +1,17 @@
 ﻿using System;
 using TeamProjectProgram;
 
-public abstract class Monster : IDamageable, IMoveable
+public abstract class Monster : IDamageable, IMoveable, IObservable
 {
     public string Name { get; set; } = "";
     public int damage = 1;
     public int Hp { get; set; }
     private int position = 0;
+
+    public Monster(string name)
+    {
+        Name = name;
+    }
 
     public void Move(int distance)
     {
@@ -22,4 +27,6 @@ public abstract class Monster : IDamageable, IMoveable
     {
         return true;
     }
+
+    public virtual void OnNotify();
 }
